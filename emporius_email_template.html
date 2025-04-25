@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emporius – Potwierdzenie zamówienia</title>
+        <style>
+    @media only screen and (max-width: 600px) {
+      .container {
+        width: 100% !important;
+        padding: 0 10px !important;
+      }
+      .stack {
+        display: block !important;
+        width: 100% !important;
+      }
+    }
+  </style>
+    </head>
+    <body style="Margin:0;padding:0;background-color:#f2f2f2;">
+
+        <!-- Kontener zewnętrzny -->
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+            width="100%">
+            <tr>
+                <td align="center">
+
+                    <!-- Baner -->
+                    <table role="presentation" border="0" cellpadding="0"
+                        cellspacing="0" width="100%"
+                        style="background-color:#cfe4d0;padding:32px 0;">
+                        <tr>
+                            <td align="center">
+                                <img src="https://emporius.pl/img/banery_glowna/transparent.png" alt="Emporius" width="200" style="display:block;height:auto;">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- Kontener treści -->
+                    <table role="presentation" border="0" cellpadding="0"
+                        cellspacing="0" width="600" class="container"
+                        style="width:600px;background-color:#ffffff;padding: 0 20px;">
+
+                        <!-- Przywitanie -->
+                        <!-- Nagłówek -->
+                        <tr>
+                            <td
+                                style="padding: 32px 20px 0; font-family: Arial, sans-serif; font-size: 28px; color:#2e7d32; text-align: left;">
+                                🛒 Dziękujemy za złożenie zamówienia
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="padding: 12px 20px 20px; font-family: Arial, sans-serif; font-size: 16px; color:#333;">
+                                Dzień dobry, <strong>{{customer_name}}</strong>,<br>
+                                Przesyłamy potwierdzenie zamówienia
+                                <strong>#{{order_number}}</strong> złożonego w
+                                dniu <strong>{{order_date}}</strong>.
+                            </td>
+                        </tr>
+
+                        <!-- Sekcja: Metoda płatności -->
+                        <tr>
+                            <td
+                                style="padding: 24px 20px 10px; font-family: Arial, sans-serif; font-size: 18px; color:#2e7d32;">
+                                💳 Metoda płatności
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="background-color:#f9f9f9;padding:16px 20px;margin:0;border:1px solid #ddd; font-family: Arial, sans-serif; font-size: 16px; color:#333;">
+                                {{payment_method}}
+                            </td>
+                        </tr>
+
+                        <!-- Sekcja: Zamówione przedmioty -->
+                        <tr>
+                            <td
+                                style="padding: 24px 20px 10px; font-family: Arial, sans-serif; font-size: 18px; color:#2e7d32;">
+                                📦 Zamówione przedmioty
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="background-color:#f9f9f9;padding:16px 20px;border:1px solid #ddd; font-family: Arial, sans-serif; font-size: 16px;">
+                                {{order_items}}
+                            </td>
+                        </tr>
+
+                        <!-- Sekcja: Adres dostawy -->
+                        <tr>
+                            <td
+                                style="padding: 24px 20px 10px; font-family: Arial, sans-serif; font-size: 18px; color:#2e7d32;">
+                                🏠 Adres dostawy
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="background-color:#f9f9f9;padding:16px 20px;border:1px solid #ddd; font-family: Arial, sans-serif; font-size: 16px;">
+                                {{shipping_firstname}} {{shipping_lastname}}<br>
+                                {{shipping_address}}<br>
+                                {{shipping_postcode}} {{shipping_city}}
+                            </td>
+                        </tr>
+
+                        <!-- Sekcja: Dane do faktury -->
+                        <tr>
+                            <td
+                                style="padding: 24px 20px 10px; font-family: Arial, sans-serif; font-size: 18px; color:#2e7d32;">
+                                🧾 Dane do faktury
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="background-color:#f9f9f9;padding:16px 20px;border:1px solid #ddd; font-family: Arial, sans-serif; font-size: 16px;">
+                                {{billing_firstname}} {{billing_lastname}}<br>
+                                {{billing_company}}<br>
+                                NIP: {{billing_nip}}<br>
+                                {{billing_address}}<br>
+                                {{billing_postcode}} {{billing_city}}
+                            </td>
+                        </tr>
+
+                        <!-- Podziękowanie -->
+                        <tr>
+                            <td
+                                style="padding: 32px 20px; font-family: Arial, sans-serif; font-size: 16px; text-align: center; color:#555;">
+                                Dziękujemy za zakupy w naszym sklepie!<br>
+                                Mamy nadzieję, że wrócisz do nas
+                                ponownie!<br><br>
+                                <strong>Zespół Emporius.pl</strong>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+
+    </body>
+</html>
