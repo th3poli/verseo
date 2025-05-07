@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Emporius – Potwierdzenie zamówienia</title>
+        <style>
+    @media only screen and (max-width: 600px) {
+      .container {
+        width: 100% !important;
+        padding: 0 10px !important;
+      }
+      .stack {
+        display: block !important;
+        width: 100% !important;
+      }
+    }
+  </style>
+    </head>
+    <body style="Margin:0;padding:0;background-color:#f2f2f2;">
+
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+            width="100%">
+            <tr>
+                <td align="center">
+
+                    <table role="presentation" border="0" cellpadding="0"
+                        cellspacing="0" width="100%"
+                        style="background-color:#cfe4d0;padding:32px 0;">
+                        <tr>
+                            <td align="center">
+                                <a href="https://emporius.pl" target="_blank"
+                                    style="text-decoration:none;">
+                                    <img
+                                        src="https://emporius.pl/img/banery_glowna/transparent.png"
+                                        alt="Emporius" width="200"
+                                        style="display:block;height:auto;">
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table role="presentation" border="0" cellpadding="0"
+                        cellspacing="0" width="600" class="container"
+                        style="width:600px;background-color:#ffffff;padding: 0 20px;">
+
+                        <tr>
+                            <td
+                                style="padding: 32px 20px 0; font-family: Arial, sans-serif; font-size: 28px; color:#2e7d32; text-align: left;">
+                                Zmiana statusu zamówienia
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="padding: 12px 20px 20px; font-family: Arial, sans-serif; font-size: 16px; color:#333;">
+                                Zamówienie nr <b>[numer_zamowienia]</b> wkrótce zostanie odebrane przez firmę spedycyjną.
+                                Gdy termin dostawy zostanie ustalony to firma spedycyjna skontaktuje się z Państwem telefonicznie kilka dni wcześniej - prosimy oczekiwać na informację.
+                                <br><br>
+                                Pragniemy poinformować, że kierowca podjeżdża najbliżej miejsca rozładunku jak tylko to możliwe,
+                                zachowując przy tym wszelkie względy bezpieczeństwa oraz przepisy o ruchu drogowym i wydaje towar z pojazdu.
+                                Kurier jest sam i nie wnosi mebli do mieszkania (chyba, że wyrazi na to chęć).
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td
+                                style="padding: 24px 20px 10px; font-family: Arial, sans-serif; font-size: 18px; color:#2e7d32;">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/72x72/1f4e6.png"
+                                    alt="Package emoji" width="20"
+                                    height="20" />
+                                Zamówione przedmioty
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="background-color:#f9f9f9;padding:16px 20px;border:1px solid #ddd; font-family: Arial, sans-serif; font-size: 16px;">
+                                {{order_items}}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td
+                                style="padding: 24px 20px 10px; font-family: Arial, sans-serif; font-size: 18px; color:#2e7d32;">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/72x72/1f3e0.png"
+                                    alt="House emoji" width="20" height="20" />
+                                Adres dostawy
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="background-color:#f9f9f9;padding:16px 20px;border:1px solid #ddd; font-family: Arial, sans-serif; font-size: 16px;">
+                                {{shipping_firstname}} {{shipping_lastname}}<br>
+                                {{shipping_address}}<br>
+                                {{shipping_postcode}} {{shipping_city}}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td
+                                style="padding: 24px 20px 10px; font-family: Arial, sans-serif; font-size: 18px; color:#2e7d32;">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/72x72/1f9fe.png"
+                                    alt="Receipt emoji" width="20"
+                                    height="20" />
+                                Dane do faktury
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="background-color:#f9f9f9;padding:16px 20px;border:1px solid #ddd; font-family: Arial, sans-serif; font-size: 16px;">
+                                {{billing_firstname}} {{billing_lastname}}<br>
+                                {{billing_company}}<br>
+                                NIP: {{billing_nip}}<br>
+                                {{billing_address}}<br>
+                                {{billing_postcode}} {{billing_city}}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td
+                                style="padding: 24px 20px 10px; font-family: Arial, sans-serif; font-size: 18px; color:#2e7d32;">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/72x72/1f4b3.png"
+                                    alt="Card emoji" width="20" height="20" />
+                                Metoda płatności
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="background-color:#f9f9f9;padding:16px 20px;margin:0;border:1px solid #ddd; font-family: Arial, sans-serif; font-size: 16px; color:#333;">
+                                {{payment_method}}
+
+                                <ul style="list-style:none;padding:0;margin:16px 0 0;">
+                                    <li style="margin-bottom:8px;font-family:Arial, sans-serif;font-size:16px;color:#333;">
+                                        <strong>Kwota za produkty:</strong> {{product_price}}
+                                    </li>
+                                    <li style="margin-bottom:8px;font-family:Arial, sans-serif;font-size:16px;color:#333;">
+                                        <strong>Kwota za dostawę:</strong> {{delivery_price}}
+                                    </li>
+                                    <li style="margin-bottom:8px;font-family:Arial, sans-serif;font-size:16px;color:#333;">
+                                        <strong>Łączna cena:</strong> {{total_price}}
+                                    </li>
+                                </ul>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td
+                                style="padding: 24px 20px 10px; font-family: Arial, sans-serif; font-size: 18px; color:#2e7d32;">
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/72x72/1f4dd.png"
+                                    alt="Card emoji" width="20" height="20" />
+                                Uwagi klienta
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                style="background-color:#f9f9f9;padding:16px 20px;margin:0;border:1px solid #ddd; font-family: Arial, sans-serif; font-size: 16px; color:#333;">
+                                {{uwagi_klienta}}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td
+                                style="padding: 32px 20px; font-family: Arial, sans-serif; font-size: 16px; text-align: center; color:#555;">
+                                Cieszymy się, że skorzystali Państwo z naszej
+                                oferty. Dołożymy wszelkich starań, aby
+                                zamówienie dotarło do Państwa tak szybko jak to
+                                możliwe. W razie jakichkolwiek pytań zachęcamy
+                                do kontaktu
+                                <br><br>
+                                <b>Zespół <a href="https://emporius.pl"
+                                        target="_blank"
+                                        style="text-decoration:none;color:#2e7d32;">Emporius.pl</a></b>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" style="padding: 20px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td style="vertical-align: top; width: 50%; font-family: Arial, sans-serif; font-size: 16px; color:#333;">
+                                            <p style="margin: 0; padding: 0;">
+                                                <a href="tel:609916403" target="_blank" style="text-decoration:none; color:#2e7d32;">
+                                                    <img src="https://emporius.pl/img/mail/phone-outline.png" alt="Phone icon" width="20" height="20" style="vertical-align:middle;"> 609 916 403
+                                                </a>
+                                            </p>
+                                            <p style="margin: 10px 0 0; padding: 0;">
+                                                <a href="mailto:biuro@emporius.pl" target="_blank" style="text-decoration:none; color:#2e7d32;">
+                                                    <img src="https://emporius.pl/img/mail/email-outline.png" alt="Email icon" width="20" height="20" style="vertical-align:middle;"> biuro@emporius.pl
+                                                </a>
+                                            </p>
+                                        </td>
+                                        <td style="vertical-align: top; width: 50%; font-family: Arial, sans-serif; font-size: 16px; color:#333;">
+                                            <p style="margin: 0; padding: 0;">
+                                                <a href="https://www.instagram.com/emporius.pl/" target="_blank" style="text-decoration:none; color:#2e7d32;">
+                                                    <img src="https://emporius.pl/img/mail/instagram.png" alt="Instagram icon" width="20" height="20" style="vertical-align:middle;"> Instagram
+                                                </a>
+                                            </p>
+                                            <p style="margin: 10px 0 0; padding: 0;">
+                                                <a href="https://www.facebook.com/profile.php?id=61551057627622&locale=pl_PL" target="_blank" style="text-decoration:none; color:#2e7d32;">
+                                                    <img src="https://emporius.pl/img/mail/facebook.png" alt="Facebook icon" width="20" height="20" style="vertical-align:middle;"> Facebook
+                                                </a>
+                                            </p>
+                                            <p style="margin: 10px 0 0; padding: 0;">
+                                                <a href="https://www.youtube.com/@Emporius_Furniture" target="_blank" style="text-decoration:none; color:#2e7d32;">
+                                                    <img src="https://emporius.pl/img/mail/youtube.png" alt="Youtube icon" width="20" height="20" style="vertical-align:middle;"> Youtube
+                                                </a>
+                                            </p>
+                                            <p style="margin: 10px 0 0; padding: 0;">
+                                                <a href="https://www.google.com/maps/place/Emporius/@51.1443196,17.8492544,520m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4710136d7f19b855:0x82b8669fadf07e32!8m2!3d51.1443196!4d17.8492544!16s%2Fg%2F11vb4b4z7g?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="text-decoration:none; color:#2e7d32;">
+                                                    <img src="https://emporius.pl/img/mail/google-maps.png" alt="Google Maps icon" width="20" height="20" style="vertical-align:middle;"> Opinie Google
+                                                </a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+    </body>
+</html>
